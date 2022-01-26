@@ -94,3 +94,36 @@ console.log(func2("func2です"));
 // };
 const func3 = (num1, num2) => num1 + num2;
 console.log(func3(1, 2));
+
+/**
+ * 分割代入
+ */
+// const myProfile = {
+//   name: "じゃけぇ",
+//   age: 28
+// };
+
+// const message3 = `名前は${myProfile.name}です。年齢は${myProfile.age}です。`;
+// console.log(message3);
+
+// const { name1, age1 } = myProfile;
+// const message4 = `名前は${name1}です。年齢は${age1}です。`;
+// console.log(message4);
+
+const myProfile = ["じゃけぇ", 28];
+
+const message5 = `名前は${myProfile[0]}です。年齢は${myProfile[1]}歳です。`;
+console.log(message5);
+
+const [name1, age1] = myProfile;
+const message6 = `名前は${name1}です。年齢は${age1}歳です。`;
+console.log(message6);
+
+/**
+ * デフォルト値、引数など
+ * 分割代入にも有効
+ */
+const sayHello = (name = "ゲスト") => {
+  console.log(`こんにちは！${name}さん！`);
+};
+sayHello("じゃけぇ");
